@@ -1,0 +1,25 @@
+{
+  "name": "the-snake-game",
+  "version": "1.0.0",
+  "description": "Serverová aplikace v NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petr-micola/Serverova-aplikace.git"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "petr-micola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petr-micola/Serverova-aplikace/issues"
+  },
+  "homepage": "https://github.com/petr-micola/Serverova-aplikace#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

@@ -1,2 +1,2 @@
 # Serverova-aplikace
-# Serverova-aplikace
+Serverová aplikace v NodeJS.
