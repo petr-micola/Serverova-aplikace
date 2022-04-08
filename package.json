@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/petr-micola/Serverova-aplikace#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.20.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
   }
 }

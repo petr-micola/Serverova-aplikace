@@ -1,0 +1,23 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Snake Online | Scoreboard
+        link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+        link(rel='stylesheet', href='styles/style.css')
+    body
+        h2 SCOREBOARD
+            table
+                thead
+                    tr
+                        th NAME
+                        th SCORE
+                        th DATE
+                tbody        
+                    each stat in data
+                        tr
+                            td  #{stat.name}
+                            td  #{stat.score}
+                            td  #{stat.date}
+        div(id='scoreboard')
+            a(href='/') Game ⧉

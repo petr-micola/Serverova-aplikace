@@ -19,6 +19,40 @@ body {
     background-color: #212124;
 }
 
+table {
+    font-family: monospace;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #000000;
+    z-index: 99;
+}
+
+table th {
+    font-size: xx-large;
+    padding: 1rem 4rem 1rem 4rem;
+}
+
+table td {
+    font-size: x-large;
+    padding: 1rem 4rem 1rem 4rem;
+}
+
+input,
+#gameOverBtn1 {
+    font-size: medium;
+    margin: 1.5rem;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: medium;
+    color: #16c60c;
+    cursor: default;
+    font-family: 'Press Start 2P', cursive;
+}
+
 .visible {
     visibility: visible !important;
 }
@@ -27,12 +61,29 @@ body {
     background-color: #16c60c;
 }
 
+.form {
+    font-size: medium;
+}
+
+#score {
+    background-color: transparent;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: medium;
+    color: #16c60c;
+    cursor: default;
+    font-family: 'Press Start 2P', cursive;
+    max-width: 3rem;
+}
+
 #myCanvas {
     position: absolute;
 }
 
 #settings,
-#info {
+#info,
+#scoreboard {
     font-size: x-small;
     position: fixed;
     bottom: 30px;
@@ -47,6 +98,10 @@ body {
     left: 30px;
 }
 
+#scoreboard {
+    bottom: 30px;
+}
+
 #start,
 #mode,
 #gameOver {
@@ -55,29 +110,26 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     visibility: hidden;
     background-color: #000000;
     z-index: 99;
 }
 
 a:hover,
+button:hover,
 #controls,
 #tail,
 #goal {
     color: #16c60c;
 }
 
-#modeBtn1,
-#modeBtn2,
-#gameOverBtn1,
-#gameOverBtn2 {
-    font-size: small;
-}
-
-a {
+a,
+button {
     cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 #fullscreenBtn,

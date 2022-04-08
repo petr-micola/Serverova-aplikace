@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to The Snake Game.">
     <meta name="keywords" content="The Snake Game, Snake, Game">
-    <title>The Snake Game Online</title>
+    <title>Snake Online</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -15,9 +15,22 @@
 <body>
     <div id="myCanvas"></div>
     <div id="start"><a id="startBtn1">START</a></div>
-    <div id="gameOver">GAME OVER<br><br><a id="gameOverBtn1">Restart</a><br></div>
+    <div id="gameOver">GAME OVER<br><br><br>
+        <div class="form">
+            <form action="/save" method="post">
+                Score <input readonly id="score" type="number" name="score"><br>
+                <label>Your name:</label><br>
+                <input type="text" name="name"><br>
+                <button type="submit">Send</button><br>
+            </form>
+        </div>
+        <br>
+        or
+        <a id="gameOverBtn1">Restart</a>
+    </div>
+    <div id="scoreboard"><a href="/scoreboard">Scoreboard ⧉</a></div>
     <div id="info">
-        Controls<span id="controls">WASD</span> Length<span id="tail">0</span>
+        Controls<span id="controls">WASD</span> Length<span id="tail" class="info">0</span>
     </div>
     <div id="settings">Fullscreen<a id="fullscreenBtn"></a> Sounds<a id="soundsBtn"></a></div>
 

@@ -1,6 +1,7 @@
 const start = document.getElementById('start');
 const end = document.getElementById('gameOver');
 const info = document.getElementById('tail');
+const score = document.getElementById('score');
 
 let btn = ['startBtn1', 'gameOverBtn1', 'fullscreenBtn', 'soundsBtn'];
 for (let i = 0; i < btn.length; i++) {
@@ -64,6 +65,7 @@ class Snake {
         let head = this.head.copy();
         this.body.push(head);
         info.innerHTML = this.body.length;
+        score.setAttribute('value', this.body.length);
     }
 
     eat(x, y) {
@@ -168,7 +170,7 @@ function preload() {
 }
 
 function setup() {
-    canvas = createCanvas(400, 400);
+    canvas = createCanvas(600, 600);
     canvas.parent('myCanvas');
     frameRate(10);
     stroke('#000000');
