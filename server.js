@@ -21,7 +21,7 @@ app.post('/save', urlencodedParser, (req, res) => {
         return i;
     }
     const d = new Date();
-    date = `${addZero(d.getDate())}/${addZero(d.getMonth())}/${addZero(d.getFullYear())} ${addZero(d.getHours())}:${addZero(d.getMinutes())}`
+    date = `${addZero(d.getDate())}/${addZero(d.getMonth() + 1)}/${addZero(d.getFullYear())} ${addZero(d.getHours())}:${addZero(d.getMinutes())}`
     let str = `"${req.body.name}", "${req.body.score}", "${date}"\n`;
     fs.appendFile(path.join(__dirname, 'data/data.csv'), str, function (err) {
         if (err) return res.status(400).json({
