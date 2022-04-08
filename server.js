@@ -16,8 +16,12 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 app.post('/save', urlencodedParser, (req, res) => {
-    let d = new Date();
-    date = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`
+    function addZero(i) {
+        if (i < 10) { i = "0" + i }
+        return i;
+    }
+    const d = new Date();
+    date = `${addZero(d.getDate())}/${addZero(d.getMonth())}/${addZero(d.getFullYear())} ${addZero(d.getHours())}:${addZero(d.getMinutes())}`
     let str = `"${req.body.name}", "${req.body.score}", "${date}"\n`;
     fs.appendFile(path.join(__dirname, 'data/data.csv'), str, function (err) {
         if (err) return res.status(400).json({
