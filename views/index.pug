@@ -1,10 +1,10 @@
-doctype
-html(lang='en')
+doctype html
+html(lang="en")
     head
-        meta(charset='utf-8')
+        meta(charset="utf-8")
         title Snake Online | Scoreboard
-        link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
-        link(rel='stylesheet', href='styles/style.css')
+        link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+        link(rel="stylesheet" href="styles/style.css")
     body
         h2 SCOREBOARD
             table
@@ -16,8 +16,8 @@ html(lang='en')
                 tbody        
                     each stat in data
                         tr
-                            td  #{stat.name}
-                            td  #{stat.score}
-                            td  #{stat.date}
-        div(id='scoreboard')
-            a(href='/') Game ⧉
+                            td #{stat.name}
+                            td #{stat.score}
+                            td #{stat.date}
+        #scoreboard
+            a(href="/") Game ⧉
